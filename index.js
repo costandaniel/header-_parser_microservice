@@ -20,11 +20,11 @@ app.get("/", function (req, res) {
 });
 
 app.get("/api/whoami", function (req, res) {
-  const lang = req.header("Accept-Language");
+  const language = req.header("Accept-Language");
   const software = req.header("User-Agent");
   const ipaddress = req.socket.remoteAddress;
   res.json({
-    lang,
+    language,
     software,
     ipaddress,
   });
